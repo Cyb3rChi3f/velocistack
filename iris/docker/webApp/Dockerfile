@@ -30,7 +30,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 COPY ./iris/source/dependencies /dependencies
 COPY ./iris/source/requirements.txt /
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install --use-pep517 -r requirements.txt
 
 ###############
 # BUILD IMAGE #
