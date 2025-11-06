@@ -1,6 +1,6 @@
 
 #!/bin/bash
-PRIMARY_IP=$(hostname -I | awk '{print $1}')
+PRIMARY_IP=$(hostname -f)
 
 # Primary IP for configuration
 for i in ./nginx/nginx.conf ./velociraptor/add_iris_velo_module ./velociraptor/entrypoint; do
